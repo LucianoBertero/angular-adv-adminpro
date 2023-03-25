@@ -1,0 +1,12 @@
+
+<div class="input-group">
+        
+    <button (click)="cambiarValor(-10)" [ngClass]="btnClass"  type="button">
+        <i class="fa fa-minus"></i>
+    </button>
+   
+    <input type="number" class="form-control" [(ngModel)]="boxWidth" [ngClass]="{'is-invalid':boxWidth>100||boxWidth < 0}"  min="0" max="100"  (ngModelChange)="validarValor($event)" >
+ 
+    <button (click)="cambiarValor(10)" [ngClass]="btnClass" type="button"><i class="fa fa-plus"></i></button>
+
+</div>
